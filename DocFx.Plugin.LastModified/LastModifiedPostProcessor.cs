@@ -41,8 +41,8 @@ namespace DocFx.Plugin.LastModified
             foreach (var manifestItem in manifest.Files.Where(x => x.DocumentType == "Conceptual"))
             foreach (var manifestItemOutputFile in manifestItem.OutputFiles)
             {
-                var sourcePath = Path.Combine(manifest.SourceBasePath, manifestItem.SourceRelativePath);
-                var outputPath = Path.Combine(outputFolder, manifestItemOutputFile.Value.RelativePath);
+                var sourcePath = Path.GetFullPath(Path.Combine(manifest.SourceBasePath, manifestItem.SourceRelativePath));
+                var outputPath = Path.GetFullPath(Path.Combine(outputFolder, manifestItemOutputFile.Value.RelativePath));
                 if (_repo != null)
                 {
                     var commitInfo = _repo.GetCommitInfo(sourcePath);
