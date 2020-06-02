@@ -3,6 +3,9 @@
 # DocFx.Plugin.LastModified
 A DocFX plugin that adds a last modified date at the end of each conceptual articles.
 
+# SorenHartvigJensen Edit
+Added GetFullPaths to source and destination resolving, as it wasn't working with relative paths.
+
 ## Features
 * Adds last commit/modified date to each articles
 * Shows last commit message at the end of each articles
