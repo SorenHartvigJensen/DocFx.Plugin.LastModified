@@ -31,6 +31,7 @@ namespace DocFx.Plugin.LastModified
                                   .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                                   ?.InformationalVersion ??
                               Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("da-DK")
             Logger.LogInfo($"Version: {versionInfo}");
             Logger.LogInfo("Begin adding last modified date to items...");
 
