@@ -55,7 +55,7 @@ namespace DocFx.Plugin.LastModified
 
                         var commitHeaderBuilder = new StringBuilder();
                         Logger.LogVerbose("Appending commit author and email...");
-                        commitHeaderBuilder.AppendLine($"Author:    {commitInfo.Author.Name}");
+                        commitHeaderBuilder.AppendLine($"Ansvarlig:    {commitInfo.Author.Name}");
                         Logger.LogVerbose("Appending commit SHA...");
                         commitHeaderBuilder.AppendLine($"Commit:    {commitInfo.Sha}");
                         
@@ -98,7 +98,7 @@ namespace DocFx.Plugin.LastModified
             }
 
             var paragraphNode = htmlDoc.CreateElement("p");
-            paragraphNode.InnerHtml = $"This page was last modified at {modifiedDate} (UTC).";
+            paragraphNode.InnerHtml = $"Sidst opdateret {modifiedDate} (UTC).";
             var separatorNode = htmlDoc.CreateElement("hr");
             articleNode.AppendChild(separatorNode);
             articleNode.AppendChild(paragraphNode);
@@ -113,7 +113,7 @@ namespace DocFx.Plugin.LastModified
                 collapsibleNode.SetAttributeValue("class", "collapse-container last-modified");
                 collapsibleNode.SetAttributeValue("id", "accordion");
                 var reasonHeaderNode = htmlDoc.CreateElement("span");
-                reasonHeaderNode.InnerHtml = "<span class=\"arrow-r\"></span>Commit Message";
+                reasonHeaderNode.InnerHtml = "<span class=\"arrow-r\"></span>Detaljer";
                 var reasonContainerNode = htmlDoc.CreateElement("div");
 
                 // inject header
