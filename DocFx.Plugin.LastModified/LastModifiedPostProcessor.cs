@@ -55,7 +55,7 @@ namespace DocFx.Plugin.LastModified
 
                         var commitHeaderBuilder = new StringBuilder();
                         Logger.LogVerbose("Appending commit author and email...");
-                        commitHeaderBuilder.AppendLine($"Ansvarlig:    {commitInfo.Author.Name}");
+                        commitHeaderBuilder.AppendLine($"Opdateret af:    {commitInfo.Author.Name}");
                         Logger.LogVerbose("Appending commit SHA...");
                         commitHeaderBuilder.AppendLine($"Commit:    {commitInfo.Sha}");
                         
