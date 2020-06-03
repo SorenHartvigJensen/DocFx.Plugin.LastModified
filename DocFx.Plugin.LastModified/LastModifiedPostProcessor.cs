@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Globalization;
 using DocFx.Plugin.LastModified.Helpers;
 using HtmlAgilityPack;
 using LibGit2Sharp;
